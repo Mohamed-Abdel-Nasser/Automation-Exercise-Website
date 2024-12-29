@@ -1,0 +1,37 @@
+{
+  "uuid": "cf8fe9e3-e790-4d84-af3f-a1e551821d51",
+  "name": "Pages_TC.TC01_SignUp",
+  "children": [
+    "4239ba53-c25e-4063-a0f3-aae611d58a57",
+    "ccd6a16b-4c52-44ad-8ded-4e687ba4e2d9",
+    "7c3cb94e-f321-4595-a247-2f61c3b063d7"
+  ],
+  "befores": [
+    {
+      "name": "browser",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1734639969863,
+      "stop": 1734639981662
+    }
+  ],
+  "afters": [
+    {
+      "name": "quit",
+      "status": "broken",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1734639981892,
+      "stop": 1734639981893
+    }
+  ],
+  "start": 1734639969822,
+  "stop": 1734639981898
+}

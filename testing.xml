@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Exercise Website">
+    <test name="Regression">
+        <classes>
+            <class name="TC_Pages.TC01_SignUp"/>
+            <class name="TC_Pages.TC02_Login"/>
+            <class name="TC_Pages.TC03_ContactUs"/>
+            <class name="TC_Pages.TC04_Products"/>
+            <class name="TC_Pages.TC05_SearchProduct"/>
+            <class name="TC_Pages.TC006_Subscription"/>
+            <class name="TC_Pages.TC007_AddProductInCart"/>
+            <class name="TC_Pages.TC008_VerifyProductQuantityInCart"/>
+            <class name="TC_Pages.TC009_RegisterWhileCheckout"/>
+            <class name="TC_Pages.TC010_RegisterBeforeCheckout"/>
+            <class name="TC_Pages.TC011_ViewCategoryProducts"/>
+        </classes>
+    </test>
+</suite>

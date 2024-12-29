@@ -1,0 +1,24 @@
+{
+  "uuid": "4c131920-20ef-495a-8333-4dda29de45d0",
+  "name": "EndToEndTest.EndToEndTest.setObject",
+  "children": [
+    "9cb1dc08-5b22-4746-80af-0c7c186658d8"
+  ],
+  "description": "",
+  "befores": [
+    {
+      "name": "setObject",
+      "status": "broken",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1735385628931,
+      "stop": 1735385628931
+    }
+  ],
+  "afters": [],
+  "start": 1735385628931,
+  "stop": 1735385628931
+}

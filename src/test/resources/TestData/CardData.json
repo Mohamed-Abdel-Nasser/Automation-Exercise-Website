@@ -1,0 +1,11 @@
+{
+  "CardDetails": {
+    "CardName": "Mohamed Nasser",
+    "CardNumber": "4000000000000002",
+    "CVC": "123",
+    "ExpiryDate": {
+      "Month": "05",
+      "Year": "2026"
+    }
+  }
+}

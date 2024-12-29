@@ -1,0 +1,31 @@
+{
+    "Name": "test",
+    "Password": "12345678",
+    "DateOfBirth": {
+        "Day": "15",
+        "Month": "8",
+        "Year": "2000"
+    },
+    "FirstName": "Mohamed",
+    "LastName": "Nasser",
+    "Address": {
+        "Street": "Cairo",
+        "City": "Cairo",
+        "State": "Test",
+        "Country": "Canada",
+        "ZipCode": "00000"
+    },
+    "MobileNumber": "01155*9987",
+    "Email": {
+        "Valid": "test@example.com",
+        "Invalid": "test#@google.com"
+    },
+    "Contact": {
+        "Subject": "Test",
+        "Message": "This message only for test"
+    },
+    "Product": {
+        "Name": "Men Tshirt",
+        "Quantity": "4"
+    }
+}

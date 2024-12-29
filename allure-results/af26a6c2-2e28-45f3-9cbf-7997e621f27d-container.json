@@ -1,0 +1,63 @@
+{
+  "uuid": "af26a6c2-2e28-45f3-9cbf-7997e621f27d",
+  "name": "EndToEndTest.EndToEndTest",
+  "children": [
+    "a65db612-81a6-4235-ae09-d831219d9acd",
+    "9f0b8aea-7515-44f8-a84f-ed857cae217d",
+    "a594bc90-3bec-4bec-bccb-573f9da714dc",
+    "9e2ca5f5-7489-48fb-9320-7b26bae5e266",
+    "f211e5d2-2326-4aa9-b057-41cfd10e01ed",
+    "ecabf549-ac25-4f9f-87c9-3f72bd1244ad",
+    "5f68d6b1-b4ca-49cf-b9f3-787d2ed5b22d",
+    "17adc27e-042c-4565-beb4-8916ab2580d7"
+  ],
+  "befores": [
+    {
+      "name": "browser",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [
+        {
+          "name": "Successfully loaded browser properties from: src/test/java/DataForTest/Browser.properties",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735444128837,
+          "stop": 1735444128837
+        },
+        {
+          "name": "Browser initialized successfully and navigated to the URL: https://www.automationexercise.com/",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1735444188835,
+          "stop": 1735444188835
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1735444128827,
+      "stop": 1735444188843
+    }
+  ],
+  "afters": [
+    {
+      "name": "quit",
+      "status": "broken",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1735444190743,
+      "stop": 1735444190744
+    }
+  ],
+  "start": 1735444128762,
+  "stop": 1735444190763
+}

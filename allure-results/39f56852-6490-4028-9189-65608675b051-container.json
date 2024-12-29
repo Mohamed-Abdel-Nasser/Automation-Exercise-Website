@@ -1,0 +1,18 @@
+{
+  "uuid": "39f56852-6490-4028-9189-65608675b051",
+  "name": "ProjectSourceLocation.java",
+  "children": [
+    "0cb6970d-f0ff-49c8-ab4b-d5e9e1a41de9",
+    "3253b222-dec3-40cc-8551-defc8027f59f",
+    "45f39199-4aa0-4768-b446-6944b521c8b0",
+    "0d864552-20b9-4481-a113-14cbbd555378",
+    "56a43a68-c9b0-479c-8231-aee27a068b30",
+    "9cb1dc08-5b22-4746-80af-0c7c186658d8",
+    "fc486455-c35c-45ae-a0b5-67d8ceecbf4a",
+    "d51bbda9-4f3e-46ab-97d1-2dc418df1cd4"
+  ],
+  "befores": [],
+  "afters": [],
+  "start": 1735385571936,
+  "stop": 1735385628955
+}

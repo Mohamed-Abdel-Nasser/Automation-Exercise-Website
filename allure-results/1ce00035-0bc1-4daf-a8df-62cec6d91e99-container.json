@@ -1,0 +1,13 @@
+{
+  "uuid": "1ce00035-0bc1-4daf-a8df-62cec6d91e99",
+  "name": "AutomationFrameWork",
+  "children": [
+    "4239ba53-c25e-4063-a0f3-aae611d58a57",
+    "ccd6a16b-4c52-44ad-8ded-4e687ba4e2d9",
+    "7c3cb94e-f321-4595-a247-2f61c3b063d7"
+  ],
+  "befores": [],
+  "afters": [],
+  "start": 1734639969821,
+  "stop": 1734639981893
+}
