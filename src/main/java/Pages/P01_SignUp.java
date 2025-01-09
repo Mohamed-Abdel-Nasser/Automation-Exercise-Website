@@ -1,14 +1,12 @@
 package Pages;
 
 import Data.DataClass;
-import Utilities.Action;
-import Utilities.Driver;
+import Utilities.Actions.ElementsActions;
+import Utilities.BrowserSetUp.Driver;
+import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class P01_SignUp extends Driver {
 
@@ -33,7 +31,7 @@ public class P01_SignUp extends Driver {
     private static final By ACCOUNT_CREATED_MESSAGE = By.xpath("//b[text()='Account Created!']");
     private static final By EMAIL_EXIST_VALIDATION_MESSAGE = By.xpath("//p[text()='Email Address already exist!']");
 
-    private static final Logger LOGGER = Logger.getLogger(P04_Products.class.getName());
+    private static final LogManager LOGGER = LogManager.getInstance();
 
     public P01_SignUp(WebDriver driver) {
         super(driver);
@@ -43,18 +41,18 @@ public class P01_SignUp extends Driver {
         try {
             if (name == null || name.trim().isEmpty()) {
                 String errorMessage = "Name cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(NAME_FIELD, name);
+            ElementsActions.sendText(NAME_FIELD, name);
             String successMessage = String.format("Successfully entered name: %s", name);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter name: %s. Error: %s", name, e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -64,18 +62,18 @@ public class P01_SignUp extends Driver {
         try {
             if (email == null || email.trim().isEmpty()) {
                 String errorMessage = "Email address cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(EMAIL_ADDRESS_FIELD, email);
+            ElementsActions.sendText(EMAIL_ADDRESS_FIELD, email);
             String successMessage = String.format("Successfully entered email: %s", email);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter email: %s. Error: %s", email, e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -83,14 +81,14 @@ public class P01_SignUp extends Driver {
 
     public P01_SignUp clickSignupButton() {
         try {
-            Action.clickElementByLocator(SIGNUP_BUTTON);
+            ElementsActions.clickElementByLocator(SIGNUP_BUTTON);
             String successMessage = "Successfully clicked the 'Sign Up' button.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = "Failed to click the 'Sign Up' button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -98,14 +96,14 @@ public class P01_SignUp extends Driver {
 
     public P01_SignUp selectTitle() {
         try {
-            Action.clickElementByLocator(TITLE_ICON);
+            ElementsActions.clickElementByLocator(TITLE_ICON);
             String successMessage = "Successfully selected gender option.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = "Failed to click on gender option: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -115,18 +113,18 @@ public class P01_SignUp extends Driver {
         try {
             if (password == null || password.trim().isEmpty()) {
                 String errorMessage = "Password cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(PASSWORD_FIELD, password);
+            ElementsActions.sendText(PASSWORD_FIELD, password);
             String successMessage = String.format("Successfully entered password: %s", password);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter password. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -136,18 +134,18 @@ public class P01_SignUp extends Driver {
         try {
             if (days == null || days.trim().isEmpty()) {
                 String errorMessage = "Day cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.selectFromDropdown(DAYS_DROPDOWN, days);
+            ElementsActions.selectFromDropdown(DAYS_DROPDOWN, days);
             String successMessage = String.format("Successfully selected day: %s", days);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to select day. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -157,18 +155,18 @@ public class P01_SignUp extends Driver {
         try {
             if (months == null || months.trim().isEmpty()) {
                 String errorMessage = "Month cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.selectFromDropdown(MONTHS_DROPDOWN, months);
+            ElementsActions.selectFromDropdown(MONTHS_DROPDOWN, months);
             String successMessage = String.format("Successfully selected month: %s", months);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to select month. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -178,18 +176,18 @@ public class P01_SignUp extends Driver {
         try {
             if (years == null || years.trim().isEmpty()) {
                 String errorMessage = "Year cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.selectFromDropdown(YEARS_DROPDOWN, years);
+            ElementsActions.selectFromDropdown(YEARS_DROPDOWN, years);
             String successMessage = String.format("Successfully selected year: %s", years);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to select year. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -199,18 +197,18 @@ public class P01_SignUp extends Driver {
         try {
             if (firstName == null || firstName.trim().isEmpty()) {
                 String errorMessage = "First name cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(FIRST_NAME_FIELD, firstName);
+            ElementsActions.sendText(FIRST_NAME_FIELD, firstName);
             String successMessage = String.format("Successfully entered first name: %s", firstName);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter first name. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -220,18 +218,18 @@ public class P01_SignUp extends Driver {
         try {
             if (lastName == null || lastName.trim().isEmpty()) {
                 String errorMessage = "Last name cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(LAST_NAME_FIELD, lastName);
+            ElementsActions.sendText(LAST_NAME_FIELD, lastName);
             String successMessage = String.format("Successfully entered last name: %s", lastName);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter last name. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -241,18 +239,18 @@ public class P01_SignUp extends Driver {
         try {
             if (address == null || address.trim().isEmpty()) {
                 String errorMessage = "Address cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(ADDRESS_FIELD, address);
+            ElementsActions.sendText(ADDRESS_FIELD, address);
             String successMessage = String.format("Successfully entered address: %s", address);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter address. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -262,18 +260,18 @@ public class P01_SignUp extends Driver {
         try {
             if (country == null || country.trim().isEmpty()) {
                 String errorMessage = "Country cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.selectFromDropdown(COUNTRY_DROPDOWN, country);
+            ElementsActions.selectFromDropdown(COUNTRY_DROPDOWN, country);
             String successMessage = String.format("Successfully selected country: %s", country);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to select country. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -283,18 +281,18 @@ public class P01_SignUp extends Driver {
         try {
             if (state == null || state.trim().isEmpty()) {
                 String errorMessage = "State cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(STATE_FIELD, state);
+            ElementsActions.sendText(STATE_FIELD, state);
             String successMessage = String.format("Successfully entered state: %s", state);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter state. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -304,18 +302,18 @@ public class P01_SignUp extends Driver {
         try {
             if (city == null || city.trim().isEmpty()) {
                 String errorMessage = "City cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.sendText(CITY_FIELD, city);
+            ElementsActions.sendText(CITY_FIELD, city);
             String successMessage = String.format("Successfully entered city: %s", city);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter city. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -325,19 +323,19 @@ public class P01_SignUp extends Driver {
         try {
             if (zipcode == null || zipcode.trim().isEmpty()) {
                 String errorMessage = "Zipcode cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.scrollToElement(ZIPCODE_FIELD);
-            Action.sendText(ZIPCODE_FIELD, zipcode);
+            ElementsActions.scrollToElement(ZIPCODE_FIELD);
+            ElementsActions.sendText(ZIPCODE_FIELD, zipcode);
             String successMessage = String.format("Successfully entered zipcode: %s", zipcode);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter zipcode. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -347,19 +345,19 @@ public class P01_SignUp extends Driver {
         try {
             if (mobileNumber == null || mobileNumber.trim().isEmpty()) {
                 String errorMessage = "Mobile number cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-            Action.scrollToElement(MOBILE_NUMBER_FIELD);
-            Action.sendText(MOBILE_NUMBER_FIELD, mobileNumber);
+            ElementsActions.scrollToElement(MOBILE_NUMBER_FIELD);
+            ElementsActions.sendText(MOBILE_NUMBER_FIELD, mobileNumber);
             String successMessage = String.format("Successfully entered mobile number: %s", mobileNumber);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter mobile number. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -367,15 +365,15 @@ public class P01_SignUp extends Driver {
 
     public P01_SignUp clickOnCreateAccountButton() {
         try {
-            Action.scrollToElement(CREATE_ACCOUNT_BUTTON);
-            Action.clickElementByLocator(CREATE_ACCOUNT_BUTTON);
+            ElementsActions.scrollToElement(CREATE_ACCOUNT_BUTTON);
+            ElementsActions.clickElementByLocator(CREATE_ACCOUNT_BUTTON);
             String successMessage = "Successfully clicked on 'Create Account' button.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to click 'Create Account' button. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -383,14 +381,14 @@ public class P01_SignUp extends Driver {
 
     public P01_SignUp clickOnContinueButton() {
         try {
-            Action.clickElementByLocator(CONTINUE_BUTTON);
+            ElementsActions.clickElementByLocator(CONTINUE_BUTTON);
             String successMessage = "Successfully clicked on 'Continue' button.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return this;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to click 'Continue' button. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -398,14 +396,14 @@ public class P01_SignUp extends Driver {
 
     public String getAccountCreationValidationMessage() {
         try {
-            String validationMessage = Action.getText(ACCOUNT_CREATED_MESSAGE);
+            String validationMessage = ElementsActions.getText(ACCOUNT_CREATED_MESSAGE);
             String successMessage = String.format("Successfully retrieved account creation message: %s", validationMessage);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return validationMessage;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to retrieve account creation message. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -413,14 +411,14 @@ public class P01_SignUp extends Driver {
 
     public String validationMessageForExistingEmail() {
         try {
-            String validationMessage = Action.getText(EMAIL_EXIST_VALIDATION_MESSAGE);
+            String validationMessage = ElementsActions.getText(EMAIL_EXIST_VALIDATION_MESSAGE);
             String successMessage = String.format("Successfully retrieved validation message for existing email: %s", validationMessage);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return validationMessage;
         } catch (Exception e) {
             String errorMessage = String.format("Failed to retrieve validation message for existing email. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -430,14 +428,14 @@ public class P01_SignUp extends Driver {
         // Validate email input
         if (email == null || email.trim().isEmpty()) {
             String errorMessage = "Email cannot be null or empty.";
-            LOGGER.log(Level.WARNING, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new IllegalArgumentException(errorMessage);
         }
         try {
             // Log the start of the user sign-up process
             String startMessage = String.format("Starting sign-up process for email: %s", email);
-            LOGGER.log(Level.INFO, startMessage);
+            LOGGER.info(startMessage);
             Allure.step(startMessage);
 
             // Fill out the sign-up form with valid user data from DataClass
@@ -461,7 +459,7 @@ public class P01_SignUp extends Driver {
 
             // Log and capture success message in Allure
             String successMessage = String.format("User successfully signed up with email: %s", email);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
 
             return this;  // Return the current SignUp object to allow method chaining
@@ -469,7 +467,7 @@ public class P01_SignUp extends Driver {
         } catch (Exception e) {
             // Log the error and add an Allure step for failure
             String errorMessage = String.format("Sign-up process failed for email: %s. Error: %s", email, e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;  // Rethrow the exception to fail the test gracefully
         }
@@ -480,14 +478,14 @@ public class P01_SignUp extends Driver {
         String email = DataClass.ContactInformation.emailOne;
         if (email == null || email.trim().isEmpty()) {
             String errorMessage = "Email cannot be null or empty for registration.";
-            LOGGER.log(Level.WARNING, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new IllegalArgumentException(errorMessage);
         }
         try {
             // Log the start of the user registration process
             String startMessage = String.format("Starting user registration with email: %s", email);
-            LOGGER.log(Level.INFO, startMessage);
+            LOGGER.info(startMessage);
             Allure.step(startMessage);
 
             // Fill out the registration form with user data
@@ -497,13 +495,13 @@ public class P01_SignUp extends Driver {
 
             // Log and capture success message in Allure
             String successMessage = String.format("User successfully registered with email: %s", email);
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
 
         } catch (Exception e) {
             // Log the error and add an Allure step for failure
             String errorMessage = String.format("Registration failed for email: %s. Error: %s", email, e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;  // Rethrow the exception to fail the test gracefully
         }

@@ -1,15 +1,13 @@
 package Pages;
 
 import Data.DataClass;
-import Utilities.Action;
-import Utilities.Driver;
-import Utilities.ScreenShot;
+import Utilities.Actions.ElementsActions;
+import Utilities.BrowserSetUp.Driver;
+import Utilities.LOGGER.LogManager;
+import Utilities.ScreenShotsManager.ScreenShot;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class P06_ProductDetails extends Driver {
 
@@ -17,7 +15,7 @@ public class P06_ProductDetails extends Driver {
     private static final By PRODUCT_QUANTITY_INPUT = By.xpath("//input[@id = 'quantity']");
     private static final By ADD_TO_CART_BUTTON = By.xpath("//div[@class = 'product-information']/span/button");
 
-    private static final Logger LOGGER = Logger.getLogger(P06_ProductDetails.class.getName());
+    private static final LogManager LOGGER = LogManager.getInstance();
 
     public P06_ProductDetails(WebDriver driver) {
         super(driver);
@@ -25,19 +23,19 @@ public class P06_ProductDetails extends Driver {
 
     public P06_ProductDetails checkVisibilityOfProductInformation() {
         try {
-            boolean isVisible = Action.isElementDisplayed(PRODUCT_INFORMATION_DIV);
+            boolean isVisible = ElementsActions.isElementDisplayed(PRODUCT_INFORMATION_DIV);
             if (!isVisible) {
                 String errorMessage = "Product information section is not visible.";
-                LOGGER.log(Level.SEVERE, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalStateException(errorMessage);
             }
             String successMessage = "Successfully verified the visibility of the product information section.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = String.format("Failed to verify product information visibility. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -48,11 +46,11 @@ public class P06_ProductDetails extends Driver {
         try {
             ScreenShot.takeScreenShot("ProductInformation");
             String successMessage = "Successfully captured screenshot for product details page.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = String.format("Failed to capture screenshot. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -65,17 +63,17 @@ public class P06_ProductDetails extends Driver {
 
             if (quantity == null || quantity.trim().isEmpty()) {
                 String errorMessage = "Product quantity cannot be null or empty.";
-                LOGGER.log(Level.WARNING, errorMessage);
+                LOGGER.error(errorMessage);
                 Allure.step(errorMessage);
                 throw new IllegalArgumentException(errorMessage);
             }
-
-            Action.sendText(PRODUCT_QUANTITY_INPUT, quantity);
-            LOGGER.log(Level.INFO, "Successfully entered product quantity: {0}", quantity);
-            Allure.step("Successfully entered product quantity: " + quantity);
+            ElementsActions.sendText(PRODUCT_QUANTITY_INPUT, quantity);
+            String successMessage = "Successfully entered product quantity: {0}" + quantity;
+            LOGGER.info(successMessage);
+            Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = String.format("Failed to enter product quantity. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
@@ -84,13 +82,13 @@ public class P06_ProductDetails extends Driver {
 
     public P06_ProductDetails clickAddToCart() {
         try {
-            Action.clickElementByLocator(ADD_TO_CART_BUTTON);
+            ElementsActions.clickElementByLocator(ADD_TO_CART_BUTTON);
             String successMessage = "Successfully clicked on the 'Add to Cart' button.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = String.format("Failed to click on the 'Add to Cart' button. Error: %s", e.getMessage());
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw e;
         }
