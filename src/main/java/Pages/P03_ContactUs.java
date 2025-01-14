@@ -1,14 +1,12 @@
 package Pages;
 
 import Data.DataClass;
-import Utilities.Driver;
-import Utilities.Action;
+import Utilities.Actions.ElementsActions;
+import Utilities.BrowserSetUp.Driver;
+import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class P03_ContactUs extends Driver {
 
@@ -22,7 +20,7 @@ public class P03_ContactUs extends Driver {
     private static final By SUCCESS_MESSAGE = By.cssSelector("div.status.alert.alert-success");
     private static final By HOME_BUTTON = By.xpath("//span[text() = ' Home']");
 
-    private static final Logger LOGGER = Logger.getLogger(P03_ContactUs.class.getName());
+    private static final LogManager LOGGER = LogManager.getInstance();
 
     public P03_ContactUs(WebDriver driver) {
         super(driver);
@@ -30,13 +28,13 @@ public class P03_ContactUs extends Driver {
 
     public P03_ContactUs enterName(String name) {
         try {
-            Action.sendText(NAME_FIELD, name);
+            ElementsActions.sendText(NAME_FIELD, name);
             String successMessage = "Name entered successfully: " + name;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to enter name: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -45,13 +43,13 @@ public class P03_ContactUs extends Driver {
 
     public P03_ContactUs enterEmail(String email) {
         try {
-            Action.sendText(EMAIL_FIELD, email);
+            ElementsActions.sendText(EMAIL_FIELD, email);
             String successMessage = "Email entered successfully: " + email;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to enter email: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -60,13 +58,13 @@ public class P03_ContactUs extends Driver {
 
     public P03_ContactUs enterSubject(String subject) {
         try {
-            Action.sendText(SUBJECT_FIELD, subject);
+            ElementsActions.sendText(SUBJECT_FIELD, subject);
             String successMessage = "Subject entered successfully: " + subject;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to enter subject: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -75,13 +73,13 @@ public class P03_ContactUs extends Driver {
 
     public P03_ContactUs enterMessage(String message) {
         try {
-            Action.sendText(MESSAGE_FIELD, message);
+            ElementsActions.sendText(MESSAGE_FIELD, message);
             String successMessage = "Message entered successfully: " + message;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to enter message: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -90,14 +88,14 @@ public class P03_ContactUs extends Driver {
 
     public P03_ContactUs uploadFile(String filePath) {
         try {
-            Action.scrollToElement(UPLOAD_FILE_FIELD);
-            Action.sendText(UPLOAD_FILE_FIELD, filePath);
+            ElementsActions.scrollToElement(UPLOAD_FILE_FIELD);
+            ElementsActions.sendText(UPLOAD_FILE_FIELD, filePath);
             String successMessage = "File uploaded successfully: " + filePath;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to upload file: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -106,15 +104,15 @@ public class P03_ContactUs extends Driver {
 
     public P03_ContactUs clickSubmitButton() {
         try {
-            Action.scrollToElement(SUBMIT_BUTTON);
-            Action.clickElementByLocator(SUBMIT_BUTTON);
+            ElementsActions.scrollToElement(SUBMIT_BUTTON);
+            ElementsActions.clickElementByLocator(SUBMIT_BUTTON);
             driver.switchTo().alert().accept();
             String successMessage = "Submit button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click submit button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -123,13 +121,13 @@ public class P03_ContactUs extends Driver {
 
     public P03_ContactUs clickHomeButton() {
         try {
-            Action.clickElementByLocator(HOME_BUTTON);
+            ElementsActions.clickElementByLocator(HOME_BUTTON);
             String successMessage = "Home button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click home button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -138,14 +136,14 @@ public class P03_ContactUs extends Driver {
 
     public String getContactUsPageHeader() {
         try {
-            String headerText = Action.getText(CONTACT_US_HEADER);
+            String headerText = ElementsActions.getText(CONTACT_US_HEADER);
             String successMessage = "Contact Us page header retrieved: " + headerText;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return headerText;
         } catch (Exception e) {
             String errorMessage = "Failed to retrieve Contact Us page header: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -153,14 +151,14 @@ public class P03_ContactUs extends Driver {
 
     public String getSuccessMessageAfterSubmission() {
         try {
-            String successMessageText = Action.getText(SUCCESS_MESSAGE);
+            String successMessageText = ElementsActions.getText(SUCCESS_MESSAGE);
             String successMessage = "Success message retrieved: " + successMessageText;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return successMessageText;
         } catch (Exception e) {
             String errorMessage = "Failed to retrieve success message: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -175,11 +173,11 @@ public class P03_ContactUs extends Driver {
             uploadFile(filePath);
             clickSubmitButton();
             String successMessage = "User successfully submitted contact form.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to submit contact form: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }

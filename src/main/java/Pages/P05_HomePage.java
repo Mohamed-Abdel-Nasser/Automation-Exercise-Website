@@ -1,14 +1,12 @@
 package Pages;
 
 import Data.DataClass;
-import Utilities.Action;
-import Utilities.Driver;
+import Utilities.Actions.ElementsActions;
+import Utilities.BrowserSetUp.Driver;
+import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class P05_HomePage extends Driver {
 
@@ -28,20 +26,21 @@ public class P05_HomePage extends Driver {
     private static final By CATEGORY_PAGE_TEXT = By.xpath("//div[@class = 'features_items']/h2");
     private static final By SCROLL_UP_BUTTON = By.xpath("//a[@id = 'scrollUp']");
 
-    private static final java.util.logging.Logger LOGGER = Logger.getLogger(P07_Cart.class.getName());
+    private static final LogManager LOGGER = LogManager.getInstance();
+
     public P05_HomePage(WebDriver driver) {
         super(driver);
     }
 
     public P05_HomePage clickSignupAndLoginButton() {
         try {
-            Action.clickElementByLocator(SIGNUP_LOGIN_BUTTON);
+            ElementsActions.clickElementByLocator(SIGNUP_LOGIN_BUTTON);
             String successMessage = "Signup and Login button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Signup and Login button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -50,13 +49,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickLogoutButton() {
         try {
-            Action.clickElementByLocator(LOGOUT_BUTTON);
+            ElementsActions.clickElementByLocator(LOGOUT_BUTTON);
             String successMessage = "Logout button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Logout button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -65,13 +64,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickContactUsButton() {
         try {
-            Action.clickElementByLocator(CONTACT_US_BUTTON);
+            ElementsActions.clickElementByLocator(CONTACT_US_BUTTON);
             String successMessage = "Contact Us button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Contact Us button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -80,13 +79,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickProductsButton() {
         try {
-            Action.clickElementByLocator(PRODUCTS_BUTTON);
+            ElementsActions.clickElementByLocator(PRODUCTS_BUTTON);
             String successMessage = "Products button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Products button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -95,15 +94,15 @@ public class P05_HomePage extends Driver {
 
     public String getSubscriptionLabelText() {
         try {
-            Action.scrollToElement(SUBSCRIPTION_LABEL);
-            String labelText = Action.getText(SUBSCRIPTION_LABEL);
+            ElementsActions.scrollToElement(SUBSCRIPTION_LABEL);
+            String labelText = ElementsActions.getText(SUBSCRIPTION_LABEL);
             String successMessage = "Subscription label retrieved: " + labelText;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return labelText;
         } catch (Exception e) {
             String errorMessage = "Failed to retrieve Subscription label: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -111,13 +110,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage enterEmailForSubscription() {
         try {
-            Action.sendText(SUBSCRIPTION_FIELD, DataClass.ContactInformation.emailOne);
+            ElementsActions.sendText(SUBSCRIPTION_FIELD, DataClass.ContactInformation.emailOne);
             String successMessage = "Email entered for subscription successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to enter email for subscription: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -126,13 +125,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickSubscribeButton() {
         try {
-            Action.clickElementByLocator(SUBSCRIBE_BUTTON);
+            ElementsActions.clickElementByLocator(SUBSCRIBE_BUTTON);
             String successMessage = "Subscribe button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Subscribe button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -141,13 +140,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickCartButton() {
         try {
-            Action.clickElementByLocator(CART_BUTTON);
+            ElementsActions.clickElementByLocator(CART_BUTTON);
             String successMessage = "Cart button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Cart button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -156,13 +155,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickDeleteAccountButton() {
         try {
-            Action.clickElementByLocator(DELETE_ACCOUNT_BUTTON);
+            ElementsActions.clickElementByLocator(DELETE_ACCOUNT_BUTTON);
             String successMessage = "Delete Account button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Delete Account button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -171,14 +170,14 @@ public class P05_HomePage extends Driver {
 
     public String getSuccessSubscriptionMessage() {
         try {
-            String message = Action.getText(SUCCESS_SUBSCRIPTION_MESSAGE);
+            String message = ElementsActions.getText(SUCCESS_SUBSCRIPTION_MESSAGE);
             String successMessage = "Success subscription message retrieved: " + message;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return message;
         } catch (Exception e) {
             String errorMessage = "Failed to retrieve success subscription message: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -186,15 +185,15 @@ public class P05_HomePage extends Driver {
 
     public String getCategoryText() {
         try {
-            Action.scrollToElement(CATEGORY_TEXT);
-            String categoryText = Action.getText(CATEGORY_TEXT);
+            ElementsActions.scrollToElement(CATEGORY_TEXT);
+            String categoryText = ElementsActions.getText(CATEGORY_TEXT);
             String successMessage = "Category text retrieved: " + categoryText;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return categoryText;
         } catch (Exception e) {
             String errorMessage = "Failed to retrieve category text: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -202,13 +201,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickWomenCategoryButton() {
         try {
-            Action.clickElementByLocator(WOMEN_CATEGORY);
+            ElementsActions.clickElementByLocator(WOMEN_CATEGORY);
             String successMessage = "Women category button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Women category button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -217,13 +216,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickWomenCategoryDressButton() {
         try {
-            Action.clickElementByLocator(WOMEN_CATEGORY_DRESS);
+            ElementsActions.clickElementByLocator(WOMEN_CATEGORY_DRESS);
             String successMessage = "Women category Dress button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Women category Dress button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -232,14 +231,14 @@ public class P05_HomePage extends Driver {
 
     public String getCategoryPageText() {
         try {
-            String categoryPageText = Action.getText(CATEGORY_PAGE_TEXT);
+            String categoryPageText = ElementsActions.getText(CATEGORY_PAGE_TEXT);
             String successMessage = "Category page text retrieved: " + categoryPageText;
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
             return categoryPageText;
         } catch (Exception e) {
             String errorMessage = "Failed to retrieve category page text: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
@@ -247,13 +246,13 @@ public class P05_HomePage extends Driver {
 
     public P05_HomePage clickScrollUpButton() {
         try {
-            Action.clickElementByLocator(SCROLL_UP_BUTTON);
+            ElementsActions.clickElementByLocator(SCROLL_UP_BUTTON);
             String successMessage = "Scroll Up button clicked successfully.";
-            LOGGER.log(Level.INFO, successMessage);
+            LOGGER.info(successMessage);
             Allure.step(successMessage);
         } catch (Exception e) {
             String errorMessage = "Failed to click Scroll Up button: " + e.getMessage();
-            LOGGER.log(Level.SEVERE, errorMessage);
+            LOGGER.error(errorMessage);
             Allure.step(errorMessage);
             throw new RuntimeException(errorMessage, e);
         }
