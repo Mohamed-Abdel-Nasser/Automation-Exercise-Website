@@ -1,1 +1,24 @@
-{"uuid":"5cf53aa1-7b56-4969-9ee5-9ea09346ad5f","name":"TestClass.EndToEndTest.E2ETest.setObject","children":["38edd9d8-46ea-47f9-bbc3-fe285a3a9b9c"],"description":"","befores":[{"name":"setObject","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736345177310,"stop":1736345177310}],"afters":[],"start":1736345177310,"stop":1736345177310}
+{
+  "uuid": "5cf53aa1-7b56-4969-9ee5-9ea09346ad5f",
+  "name": "TestClass.EndToEndTest.E2ETest.setObject",
+  "children": [
+    "38edd9d8-46ea-47f9-bbc3-fe285a3a9b9c"
+  ],
+  "description": "",
+  "befores": [
+    {
+      "name": "setObject",
+      "status": "broken",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736345177310,
+      "stop": 1736345177310
+    }
+  ],
+  "afters": [],
+  "start": 1736345177310,
+  "stop": 1736345177310
+}

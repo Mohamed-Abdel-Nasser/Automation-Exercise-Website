@@ -1,7 +1,7 @@
 package Utilities.Actions;
 
 
-import Utilities.BrowserSetUp.DriverFactory;
+import Utilities.BrowserSetUp.BrowserDriverFactory;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 
 import java.time.Duration;
 
-public class WaitActions extends DriverFactory {
+public class WaitActions extends BrowserDriverFactory {
     public WaitActions(WebDriver driver) {
         super(driver);
     }

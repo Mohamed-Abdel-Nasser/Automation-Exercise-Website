@@ -1,1 +1,55 @@
-{"uuid":"8084f2ad-d073-4b1e-8867-9af8328a534c","name":"Pages_TC.T01_SignUp","children":["c9970abd-7855-426c-8c8c-463421c284fb","b0957602-a2c9-4f4a-ae63-1364647efaec","5ca3f797-e5e5-4f83-a1cb-75cc4cd11950"],"befores":[{"name":"browser","status":"broken","statusDetails":{"known":false,"muted":false,"flaky":false,"message":"java.lang.ExceptionInInitializerError","trace":"java.lang.ExceptionInInitializerError\r\n\tat Utilities.Browser.<clinit>(Browser.java:13)\r\n\tat TestBase.Browser.browser(Browser.java:19)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)\r\n\tat org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)\r\n\tat org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\nCaused by: java.lang.RuntimeException: Error loading browser properties\r\n\tat Data.BrowserLink.<clinit>(BrowserLink.java:20)\r\n\t... 25 more\r\nCaused by: java.io.IOException: Error loading browser properties from file: src/test/java/DataForTest/Browser.properties\r\n\tat Data.BrowserLink.loadBrowserProperties(BrowserLink.java:36)\r\n\tat Data.BrowserLink.<clinit>(BrowserLink.java:17)\r\n\t... 25 more\r\nCaused by: java.io.FileNotFoundException: src\\test\\java\\DataForTest\\Browser.properties (The system cannot find the path specified)\r\n\tat java.base/java.io.FileInputStream.open0(Native Method)\r\n\tat java.base/java.io.FileInputStream.open(FileInputStream.java:219)\r\n\tat java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)\r\n\tat java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)\r\n\tat Data.BrowserLink.loadBrowserProperties(BrowserLink.java:27)\r\n\t... 26 more\r\n"},"stage":"finished","description":"","steps":[{"name":"Error loading browser properties from file: src/test/java/DataForTest/Browser.properties","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736337139520,"stop":1736337139521}],"attachments":[],"parameters":[],"start":1736337139336,"stop":1736337139530}],"afters":[{"name":"quit","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736337139710,"stop":1736337139711}],"start":1736337139304,"stop":1736337139718}
+{
+  "uuid": "8084f2ad-d073-4b1e-8867-9af8328a534c",
+  "name": "Pages_TC.T01_SignUp",
+  "children": [
+    "c9970abd-7855-426c-8c8c-463421c284fb",
+    "b0957602-a2c9-4f4a-ae63-1364647efaec",
+    "5ca3f797-e5e5-4f83-a1cb-75cc4cd11950"
+  ],
+  "befores": [
+    {
+      "name": "browser",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "java.lang.ExceptionInInitializerError",
+        "trace": "java.lang.ExceptionInInitializerError\r\n\tat Utilities.Browser.<clinit>(Browser.java:13)\r\n\tat TestBase.Browser.browser(Browser.java:19)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\r\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)\r\n\tat org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)\r\n\tat org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)\r\n\tat org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)\r\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\r\n\tat org.testng.TestRunner.run(TestRunner.java:614)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\r\n\tat org.testng.TestNG.run(TestNG.java:1079)\r\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\r\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\r\nCaused by: java.lang.RuntimeException: Error loading browser properties\r\n\tat Data.BrowserLink.<clinit>(BrowserLink.java:20)\r\n\t... 25 more\r\nCaused by: java.io.IOException: Error loading browser properties from file: src/test/java/DataForTest/Browser.properties\r\n\tat Data.BrowserLink.loadBrowserProperties(BrowserLink.java:36)\r\n\tat Data.BrowserLink.<clinit>(BrowserLink.java:17)\r\n\t... 25 more\r\nCaused by: java.io.FileNotFoundException: src\\test\\java\\DataForTest\\Browser.properties (The system cannot find the path specified)\r\n\tat java.base/java.io.FileInputStream.open0(Native Method)\r\n\tat java.base/java.io.FileInputStream.open(FileInputStream.java:219)\r\n\tat java.base/java.io.FileInputStream.<init>(FileInputStream.java:159)\r\n\tat java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)\r\n\tat Data.BrowserLink.loadBrowserProperties(BrowserLink.java:27)\r\n\t... 26 more\r\n"
+      },
+      "stage": "finished",
+      "description": "",
+      "steps": [
+        {
+          "name": "Error loading browser properties from file: src/test/java/DataForTest/Browser.properties",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736337139520,
+          "stop": 1736337139521
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736337139336,
+      "stop": 1736337139530
+    }
+  ],
+  "afters": [
+    {
+      "name": "quit",
+      "status": "broken",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736337139710,
+      "stop": 1736337139711
+    }
+  ],
+  "start": 1736337139304,
+  "stop": 1736337139718
+}

@@ -1,1 +1,63 @@
-{"uuid":"b7d07c5a-b4d6-4704-a866-3eae3237006c","name":"EndToEndTest.E2ETest","children":["7ddbb729-5b79-4644-aafb-8e2586eeb7b5","fa1eb72b-6d09-49b8-b8ea-fd93778df075","b5a968bc-6bb1-4693-82bf-f1aab61e0bfd","f6a65993-0c22-4a5d-b5c4-3ea803bf073b","64340a1f-7fe0-4233-aa86-d73978fd399e","cb93bed7-25d8-43af-841f-c061b48f8927","83b60c4d-048d-4b26-89e7-643e1967239f","5d555d65-337d-47c3-a9e8-920a6d094d05"],"befores":[{"name":"browser","status":"passed","stage":"finished","description":"","steps":[{"name":"Successfully loaded browser properties from: src/test/resources/TestData/Browser.properties","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736339587955,"stop":1736339587956},{"name":"Browser initialized successfully and navigated to the URL: https://www.automationexercise.com/","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736339597176,"stop":1736339597176}],"attachments":[],"parameters":[],"start":1736339587652,"stop":1736339597180}],"afters":[{"name":"quit","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736339597457,"stop":1736339597457}],"start":1736339587607,"stop":1736339597457}
+{
+  "uuid": "b7d07c5a-b4d6-4704-a866-3eae3237006c",
+  "name": "EndToEndTest.E2ETest",
+  "children": [
+    "7ddbb729-5b79-4644-aafb-8e2586eeb7b5",
+    "fa1eb72b-6d09-49b8-b8ea-fd93778df075",
+    "b5a968bc-6bb1-4693-82bf-f1aab61e0bfd",
+    "f6a65993-0c22-4a5d-b5c4-3ea803bf073b",
+    "64340a1f-7fe0-4233-aa86-d73978fd399e",
+    "cb93bed7-25d8-43af-841f-c061b48f8927",
+    "83b60c4d-048d-4b26-89e7-643e1967239f",
+    "5d555d65-337d-47c3-a9e8-920a6d094d05"
+  ],
+  "befores": [
+    {
+      "name": "browser",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [
+        {
+          "name": "Successfully loaded browser properties from: src/test/resources/TestData/Browser.properties",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736339587955,
+          "stop": 1736339587956
+        },
+        {
+          "name": "Browser initialized successfully and navigated to the URL: https://www.automationexercise.com/",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736339597176,
+          "stop": 1736339597176
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736339587652,
+      "stop": 1736339597180
+    }
+  ],
+  "afters": [
+    {
+      "name": "quit",
+      "status": "broken",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736339597457,
+      "stop": 1736339597457
+    }
+  ],
+  "start": 1736339587607,
+  "stop": 1736339597457
+}

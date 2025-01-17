@@ -1,1 +1,73 @@
-{"uuid":"193b55ee-0640-48f4-9272-a73e11c4dd1c","name":"TestClass.EndToEndTest.E2ETest","children":["20a2efaf-cb1d-4aed-99f5-d8ff95a29d19","48f2af21-fba3-40ce-a97d-76ce09b418c6","ff9b1e08-1d28-4331-a4e6-e695bc07fbf8","3e32a129-8600-4277-ac16-e2c7a991ea16","e1c6013d-7a37-4146-8aca-ae879c1806ef","47bbb415-158c-48c9-874c-3a04af24fee8","669811ee-2a3e-4b95-96ff-b880100ab949"],"befores":[{"name":"browser","status":"passed","stage":"finished","description":"","steps":[{"name":"Successfully loaded browser properties from: src/test/resources/TestData/Browser.properties","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736339916613,"stop":1736339916615},{"name":"Browser initialized successfully and navigated to the URL: https://www.automationexercise.com/","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736339924894,"stop":1736339924894}],"attachments":[],"parameters":[],"start":1736339916397,"stop":1736339924896}],"afters":[{"name":"quit","status":"passed","stage":"finished","description":"","steps":[{"name":"Browser closed and resources released.","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736339975458,"stop":1736339975458}],"attachments":[],"parameters":[],"start":1736339975201,"stop":1736339975459}],"start":1736339916365,"stop":1736339975462}
+{
+  "uuid": "193b55ee-0640-48f4-9272-a73e11c4dd1c",
+  "name": "TestClass.EndToEndTest.E2ETest",
+  "children": [
+    "20a2efaf-cb1d-4aed-99f5-d8ff95a29d19",
+    "48f2af21-fba3-40ce-a97d-76ce09b418c6",
+    "ff9b1e08-1d28-4331-a4e6-e695bc07fbf8",
+    "3e32a129-8600-4277-ac16-e2c7a991ea16",
+    "e1c6013d-7a37-4146-8aca-ae879c1806ef",
+    "47bbb415-158c-48c9-874c-3a04af24fee8",
+    "669811ee-2a3e-4b95-96ff-b880100ab949"
+  ],
+  "befores": [
+    {
+      "name": "browser",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [
+        {
+          "name": "Successfully loaded browser properties from: src/test/resources/TestData/Browser.properties",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736339916613,
+          "stop": 1736339916615
+        },
+        {
+          "name": "Browser initialized successfully and navigated to the URL: https://www.automationexercise.com/",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736339924894,
+          "stop": 1736339924894
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736339916397,
+      "stop": 1736339924896
+    }
+  ],
+  "afters": [
+    {
+      "name": "quit",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [
+        {
+          "name": "Browser closed and resources released.",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736339975458,
+          "stop": 1736339975458
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736339975201,
+      "stop": 1736339975459
+    }
+  ],
+  "start": 1736339916365,
+  "stop": 1736339975462
+}

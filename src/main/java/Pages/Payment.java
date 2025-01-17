@@ -2,14 +2,15 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.DriverFactory;
+import Utilities.BrowserSetUp.BrowserDriverFactory;
+import Utilities.BrowserSetUp.BrowserDriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class Payment extends DriverFactory {
+public class Payment extends BrowserDriverFactory {
 
     private static final By NAME_ON_CARD_FIELD = By.xpath("//input[@name = 'name_on_card']");
     private static final By CARD_NUMBER_FIELD = By.xpath("//input[@name = 'card_number']");

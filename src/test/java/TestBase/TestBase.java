@@ -4,7 +4,9 @@ package TestBase;
 import Utilities.BrowserSetUp.BrowserDriverFactory;
 import Utilities.BrowserSetUp.BrowserConfiguration;
 import Utilities.LOGGER.LogManager;
+import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -15,11 +17,15 @@ public class TestBase {
     public WebDriver driver;
     private final LogManager LOGGER = LogManager.getInstance(); // Initialize the logger instance
 
+
     @BeforeSuite
     public void initDriver() {
         if (driver == null) {
             LOGGER.info("Initializing browser driver...");
-            BrowserDriverFactory browserDriverFactory = new BrowserDriverFactory();
+            // Initialize the WebDriver instance here
+            driver = new ChromeDriver();
+
+            BrowserDriverFactory browserDriverFactory = new BrowserDriverFactory(driver);
             LOGGER.info("Creating WebDriver for browser type: " + BrowserConfiguration.selectedBrowser + " as specified in the JSON configuration file.");
             driver = browserDriverFactory.createDriver(BrowserConfiguration.selectedBrowser, BrowserConfiguration.testExecutionMode);
             if (driver != null) {
@@ -45,7 +51,11 @@ public class TestBase {
     public void refreshBrowser() {
         if (driver != null) {
             LOGGER.info("Refreshing the browser after test.");
-            driver.navigate().refresh();
+            try {
+                driver.navigate().refresh();
+            } catch (NoSuchWindowException e) {
+                LOGGER.error("Window already closed. Unable to refresh the browser."+e);
+            }
         } else {
             LOGGER.error("Driver is not initialized. Unable to refresh the browser.");
         }

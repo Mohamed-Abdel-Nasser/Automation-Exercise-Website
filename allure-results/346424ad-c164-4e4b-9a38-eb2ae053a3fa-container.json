@@ -1,1 +1,24 @@
-{"uuid":"346424ad-c164-4e4b-9a38-eb2ae053a3fa","name":"TestBase.TestBase.deleteAllCookies","children":["6b54612f-2ed1-4d90-95f5-ac97db3ea3f6"],"description":"","befores":[{"name":"deleteAllCookies","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736900074604,"stop":1736900074617}],"afters":[],"start":1736900074604,"stop":1736900074617}
+{
+  "uuid": "346424ad-c164-4e4b-9a38-eb2ae053a3fa",
+  "name": "TestBase.TestBase.deleteAllCookies",
+  "children": [
+    "6b54612f-2ed1-4d90-95f5-ac97db3ea3f6"
+  ],
+  "description": "",
+  "befores": [
+    {
+      "name": "deleteAllCookies",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736900074604,
+      "stop": 1736900074617
+    }
+  ],
+  "afters": [],
+  "start": 1736900074604,
+  "stop": 1736900074617
+}

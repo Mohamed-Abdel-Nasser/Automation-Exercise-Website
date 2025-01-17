@@ -1,1 +1,24 @@
-{"uuid":"66a4079a-9b6e-4a98-9a19-09234cb971a1","name":"TestBase.TestBase.refreshBrowser","children":["e3a4435e-5fe5-44db-a723-0990d47f07f6"],"description":"","befores":[],"afters":[{"name":"refreshBrowser","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736897685944,"stop":1736897685962}],"start":1736897685944,"stop":1736897685962}
+{
+  "uuid": "66a4079a-9b6e-4a98-9a19-09234cb971a1",
+  "name": "TestBase.TestBase.refreshBrowser",
+  "children": [
+    "e3a4435e-5fe5-44db-a723-0990d47f07f6"
+  ],
+  "description": "",
+  "befores": [],
+  "afters": [
+    {
+      "name": "refreshBrowser",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736897685944,
+      "stop": 1736897685962
+    }
+  ],
+  "start": 1736897685944,
+  "stop": 1736897685962
+}

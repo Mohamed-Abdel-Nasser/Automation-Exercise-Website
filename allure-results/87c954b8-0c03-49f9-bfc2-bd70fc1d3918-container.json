@@ -1,1 +1,12 @@
-{"uuid":"87c954b8-0c03-49f9-bfc2-bd70fc1d3918","name":"Default Suite","children":["b9de3b8a-40c7-4d20-a72b-2f5a4d231856","3874349d-440a-487c-aa2f-e63f93acb7b7"],"befores":[],"afters":[],"start":1736338569224,"stop":1736338581474}
+{
+  "uuid": "87c954b8-0c03-49f9-bfc2-bd70fc1d3918",
+  "name": "Default Suite",
+  "children": [
+    "b9de3b8a-40c7-4d20-a72b-2f5a4d231856",
+    "3874349d-440a-487c-aa2f-e63f93acb7b7"
+  ],
+  "befores": [],
+  "afters": [],
+  "start": 1736338569224,
+  "stop": 1736338581474
+}

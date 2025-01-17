@@ -2,7 +2,7 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.DriverFactory;
+import Utilities.BrowserSetUp.BrowserDriverFactory;
 import Utilities.LOGGER.LogManager;
 import Utilities.ScreenShotsManager.ScreenShot;
 import io.qameta.allure.Allure;
@@ -14,7 +14,7 @@ import org.testng.Assert;
 import java.util.List;
 import java.util.Random;
 
-public class P04_Products extends DriverFactory {
+public class P04_Products extends BrowserDriverFactory {
 
     private static final By PRODUCTS_PAGE_TEXT = By.xpath("//h2[text() = 'All Products']");
     private static final By ALL_PRODUCTS = By.xpath("//div[@class = 'features_items']/div[@class = 'col-sm-4']");

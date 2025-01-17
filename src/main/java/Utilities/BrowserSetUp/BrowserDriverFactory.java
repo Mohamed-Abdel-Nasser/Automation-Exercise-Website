@@ -2,6 +2,7 @@ package Utilities.BrowserSetUp;
 
 
 import Utilities.LOGGER.LogManager;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,9 +15,33 @@ public class BrowserDriverFactory {
 
     private final String browserType = BrowserConfiguration.selectedBrowser.trim().toLowerCase();
     private final String executionType = BrowserConfiguration.testExecutionMode.trim().toLowerCase();
-
+    public static WebDriver driver;
     private final LogManager LOGGER = LogManager.getInstance(); // Initialize the logger instance
 
+    public BrowserDriverFactory(WebDriver driver) {
+        try {
+            if (driver == null) {
+                String errorMessage = "WebDriver instance is null. Initialization failed.";
+                LOGGER.error(errorMessage);
+                Allure.step(errorMessage);
+                throw new IllegalArgumentException("Driver cannot be null.");
+            }
+            this.driver = driver;
+            String successMessage = String.format("BasePages initialized successfully with driver: %s", driver.toString());
+            LOGGER.info(successMessage);
+            Allure.step(successMessage);
+        } catch (IllegalArgumentException e) {
+            String errorMessage = "Failed to initialize BasePages: " + e.getMessage();
+            LOGGER.error(errorMessage + e);
+            Allure.step(errorMessage);
+            throw e;
+        } catch (Exception e) {
+            String unexpectedError = "Unexpected error during BasePages initialization: " + e.getMessage();
+            LOGGER.error(unexpectedError + e);
+            Allure.step(unexpectedError);
+            throw new RuntimeException("Error initializing BasePages.", e);
+        }
+    }
     public WebDriver createDriver(String browserType, String executionType) {
         LOGGER.info("Creating WebDriver for browser: " + browserType + " with execution type: " + executionType);
 
@@ -37,7 +62,9 @@ public class BrowserDriverFactory {
                 LOGGER.error("Unsupported browser type: " + this.browserType);
                 throw new IllegalArgumentException("Unsupported browser type: " + this.browserType);
         }
+
     }
+
 
     private WebDriver createChromeDriver() {
         ChromeOptions options = new ChromeOptions();

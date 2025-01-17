@@ -1,1 +1,36 @@
-{"uuid":"bc1d094e-2cd2-47dd-8226-be3ad7a1e6d3","name":"Default Suite","children":["0c04cdd1-a496-4b20-b33d-25c2ba076fca","c733fd53-5944-4ef1-9e53-8b839638a109"],"befores":[{"name":"initDriver","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736992193580,"stop":1736992197286}],"afters":[{"name":"closeDriver","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736992203122,"stop":1736992203211}],"start":1736992193570,"stop":1736992203211}
+{
+  "uuid": "bc1d094e-2cd2-47dd-8226-be3ad7a1e6d3",
+  "name": "Default Suite",
+  "children": [
+    "0c04cdd1-a496-4b20-b33d-25c2ba076fca",
+    "c733fd53-5944-4ef1-9e53-8b839638a109"
+  ],
+  "befores": [
+    {
+      "name": "initDriver",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736992193580,
+      "stop": 1736992197286
+    }
+  ],
+  "afters": [
+    {
+      "name": "closeDriver",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736992203122,
+      "stop": 1736992203211
+    }
+  ],
+  "start": 1736992193570,
+  "stop": 1736992203211
+}

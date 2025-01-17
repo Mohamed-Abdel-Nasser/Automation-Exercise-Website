@@ -1,1 +1,24 @@
-{"uuid":"8f2449c3-42ab-49ed-a33c-35f64910415e","name":"TestClass.Pages_TC.T01_SignUp.setObject","children":["d3139cb8-b366-4495-acb2-2002a3537e4b"],"description":"","befores":[{"name":"setObject","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1736897168012,"stop":1736897168012}],"afters":[],"start":1736897168012,"stop":1736897168012}
+{
+  "uuid": "8f2449c3-42ab-49ed-a33c-35f64910415e",
+  "name": "TestClass.Pages_TC.T01_SignUp.setObject",
+  "children": [
+    "d3139cb8-b366-4495-acb2-2002a3537e4b"
+  ],
+  "description": "",
+  "befores": [
+    {
+      "name": "setObject",
+      "status": "broken",
+      "stage": "finished",
+      "description": "",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736897168012,
+      "stop": 1736897168012
+    }
+  ],
+  "afters": [],
+  "start": 1736897168012,
+  "stop": 1736897168012
+}

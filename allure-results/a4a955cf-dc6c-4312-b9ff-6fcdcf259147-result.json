@@ -1,1 +1,81 @@
-{"uuid":"a4a955cf-dc6c-4312-b9ff-6fcdcf259147","historyId":"ce53ae67f37e89353a709f2381cf9daf","fullName":"TestClass.Pages_TC.T01_SignUp.testRegisterWithExistingEmail","labels":[{"name":"package","value":"TestClass.Pages_TC.T01_SignUp"},{"name":"testClass","value":"TestClass.Pages_TC.T01_SignUp"},{"name":"testMethod","value":"testRegisterWithExistingEmail"},{"name":"parentSuite","value":"Default Suite"},{"name":"suite","value":"testing.xml"},{"name":"subSuite","value":"TestClass.Pages_TC.T01_SignUp"},{"name":"host","value":"Mohamed-Nasser.local"},{"name":"thread","value":"7867@Mohamed-Nasser.local.main(1)"},{"name":"framework","value":"testng"},{"name":"language","value":"java"},{"name":"owner","value":"Mohamed Nasser"},{"name":"feature","value":"Register Page"},{"name":"severity","value":"critical"}],"links":[{"name":"https://www.automationexercise.com/signup","type":"custom"}],"name":"testRegisterWithExistingEmail","status":"skipped","statusDetails":{"known":false,"muted":false,"flaky":false,"message":"Method TestClass.Pages_TC.T01_SignUp.testRegisterWithExistingEmail() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc depends on not successfully finished methods \n[TestClass.Pages_TC.T01_SignUp.testRegisterNewUser() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc]","trace":"java.lang.Throwable: Method TestClass.Pages_TC.T01_SignUp.testRegisterWithExistingEmail() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc depends on not successfully finished methods \n[TestClass.Pages_TC.T01_SignUp.testRegisterNewUser() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc]\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\n\tat org.testng.TestRunner.run(TestRunner.java:614)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\n\tat org.testng.TestNG.run(TestNG.java:1079)\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\n"},"stage":"finished","description":"Register With Existing Email","steps":[],"attachments":[],"parameters":[],"start":1736897342202,"stop":1736897342202}
+{
+  "uuid": "a4a955cf-dc6c-4312-b9ff-6fcdcf259147",
+  "historyId": "ce53ae67f37e89353a709f2381cf9daf",
+  "fullName": "TestClass.Pages_TC.T01_SignUp.testRegisterWithExistingEmail",
+  "labels": [
+    {
+      "name": "package",
+      "value": "TestClass.Pages_TC.T01_SignUp"
+    },
+    {
+      "name": "testClass",
+      "value": "TestClass.Pages_TC.T01_SignUp"
+    },
+    {
+      "name": "testMethod",
+      "value": "testRegisterWithExistingEmail"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Default Suite"
+    },
+    {
+      "name": "suite",
+      "value": "testing.xml"
+    },
+    {
+      "name": "subSuite",
+      "value": "TestClass.Pages_TC.T01_SignUp"
+    },
+    {
+      "name": "host",
+      "value": "Mohamed-Nasser.local"
+    },
+    {
+      "name": "thread",
+      "value": "7867@Mohamed-Nasser.local.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "testng"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "owner",
+      "value": "Mohamed Nasser"
+    },
+    {
+      "name": "feature",
+      "value": "Register Page"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    }
+  ],
+  "links": [
+    {
+      "name": "https://www.automationexercise.com/signup",
+      "type": "custom"
+    }
+  ],
+  "name": "testRegisterWithExistingEmail",
+  "status": "skipped",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Method TestClass.Pages_TC.T01_SignUp.testRegisterWithExistingEmail() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc depends on not successfully finished methods \n[TestClass.Pages_TC.T01_SignUp.testRegisterNewUser() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc]",
+    "trace": "java.lang.Throwable: Method TestClass.Pages_TC.T01_SignUp.testRegisterWithExistingEmail() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc depends on not successfully finished methods \n[TestClass.Pages_TC.T01_SignUp.testRegisterNewUser() on instance TestClass.Pages_TC.T01_SignUp@60d8c0dc]\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\n\tat org.testng.TestRunner.run(TestRunner.java:614)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\n\tat org.testng.TestNG.run(TestNG.java:1079)\n\tat com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)\n\tat com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)\n"
+  },
+  "stage": "finished",
+  "description": "Register With Existing Email",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1736897342202,
+  "stop": 1736897342202
+}

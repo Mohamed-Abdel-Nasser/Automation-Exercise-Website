@@ -1,1 +1,12 @@
-{"uuid":"7f7d1a28-f4bb-4186-807c-a41fa51139b4","name":"TestClass.Pages_TC.T01_SignUp","children":["e72693da-1f0c-451b-97f6-84d2a0cf5b6a","a4a955cf-dc6c-4312-b9ff-6fcdcf259147"],"befores":[],"afters":[],"start":1736897342173,"stop":1736897342205}
+{
+  "uuid": "7f7d1a28-f4bb-4186-807c-a41fa51139b4",
+  "name": "TestClass.Pages_TC.T01_SignUp",
+  "children": [
+    "e72693da-1f0c-451b-97f6-84d2a0cf5b6a",
+    "a4a955cf-dc6c-4312-b9ff-6fcdcf259147"
+  ],
+  "befores": [],
+  "afters": [],
+  "start": 1736897342173,
+  "stop": 1736897342205
+}

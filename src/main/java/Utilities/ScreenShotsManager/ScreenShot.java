@@ -1,6 +1,6 @@
 package Utilities.ScreenShotsManager;
 
-import Utilities.BrowserSetUp.DriverFactory;
+import Utilities.BrowserSetUp.BrowserDriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
@@ -11,11 +11,10 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Driver;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ScreenShot extends DriverFactory {
+public class ScreenShot extends BrowserDriverFactory {
 
     private static final LogManager logger = LogManager.getInstance();
 

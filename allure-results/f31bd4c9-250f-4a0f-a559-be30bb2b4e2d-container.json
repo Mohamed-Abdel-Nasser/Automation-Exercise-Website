@@ -1,1 +1,45 @@
-{"uuid":"f31bd4c9-250f-4a0f-a559-be30bb2b4e2d","name":"TestClass.Pages_TC.T01_SignUp.setObject","children":["a1a38b2b-dbcc-45d0-8eaa-f9eba31c615e"],"description":"","befores":[{"name":"setObject","status":"passed","stage":"finished","description":"","steps":[{"name":"BasePages initialized successfully with driver: ChromeDriver: chrome on mac (ddaf1f7cc86ea935eb2685f62f7c438d)","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736899854745,"stop":1736899854745},{"name":"BasePages initialized successfully with driver: ChromeDriver: chrome on mac (ddaf1f7cc86ea935eb2685f62f7c438d)","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1736899854750,"stop":1736899854750}],"attachments":[],"parameters":[],"start":1736899854742,"stop":1736899854750}],"afters":[],"start":1736899854742,"stop":1736899854750}
+{
+  "uuid": "f31bd4c9-250f-4a0f-a559-be30bb2b4e2d",
+  "name": "TestClass.Pages_TC.T01_SignUp.setObject",
+  "children": [
+    "a1a38b2b-dbcc-45d0-8eaa-f9eba31c615e"
+  ],
+  "description": "",
+  "befores": [
+    {
+      "name": "setObject",
+      "status": "passed",
+      "stage": "finished",
+      "description": "",
+      "steps": [
+        {
+          "name": "BasePages initialized successfully with driver: ChromeDriver: chrome on mac (ddaf1f7cc86ea935eb2685f62f7c438d)",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736899854745,
+          "stop": 1736899854745
+        },
+        {
+          "name": "BasePages initialized successfully with driver: ChromeDriver: chrome on mac (ddaf1f7cc86ea935eb2685f62f7c438d)",
+          "status": "passed",
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1736899854750,
+          "stop": 1736899854750
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1736899854742,
+      "stop": 1736899854750
+    }
+  ],
+  "afters": [],
+  "start": 1736899854742,
+  "stop": 1736899854750
+}
