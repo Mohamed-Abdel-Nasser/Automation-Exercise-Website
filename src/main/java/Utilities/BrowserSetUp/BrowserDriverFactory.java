@@ -12,9 +12,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BrowserDriverFactory {
 
-    private final String browserType = FrameworkConstants.browser.trim().toLowerCase();
-    private final String executionType = FrameworkConstants.executionType.trim().toLowerCase();
-    private static final String URL = BrowserLinkLoadProperties.getProperties().getProperty("URL");
+    private final String browserType = BrowserConfiguration.selectedBrowser.trim().toLowerCase();
+    private final String executionType = BrowserConfiguration.testExecutionMode.trim().toLowerCase();
 
     private final LogManager LOGGER = LogManager.getInstance(); // Initialize the logger instance
 

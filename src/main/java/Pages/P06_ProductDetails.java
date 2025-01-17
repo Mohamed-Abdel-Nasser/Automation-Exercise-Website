@@ -2,14 +2,14 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import Utilities.ScreenShotsManager.ScreenShot;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class P06_ProductDetails extends Driver {
+public class P06_ProductDetails extends DriverFactory {
 
     private static final By PRODUCT_INFORMATION_DIV = By.xpath("//div[@class = 'product-information']");
     private static final By PRODUCT_QUANTITY_INPUT = By.xpath("//input[@id = 'quantity']");

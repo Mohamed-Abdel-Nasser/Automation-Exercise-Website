@@ -1,8 +1,8 @@
-package EndToEndTest;
+package TestClass.EndToEndTest;
 
 import Data.DataClass;
 import Pages.*;
-import TestBase.Browser;
+import TestBase.TestBase;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -11,7 +11,8 @@ import org.testng.asserts.SoftAssert;
 
 import java.nio.file.Paths;
 
-public class E2ETest extends Browser {
+public class E2ETest extends TestBase {
+
 
     private P05_HomePage homePage;
     private P04_Products products;

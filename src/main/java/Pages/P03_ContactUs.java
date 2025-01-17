@@ -2,13 +2,13 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class P03_ContactUs extends Driver {
+public class P03_ContactUs extends DriverFactory {
 
     private static final By CONTACT_US_HEADER = By.xpath("//h2[text() = 'Get In Touch']");
     private static final By NAME_FIELD = By.xpath("//input[@data-qa='name']");
@@ -184,4 +184,3 @@ public class P03_ContactUs extends Driver {
         return this;
     }
 }
-

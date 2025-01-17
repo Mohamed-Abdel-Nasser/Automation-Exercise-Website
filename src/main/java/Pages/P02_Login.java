@@ -2,14 +2,14 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class P02_Login extends Driver {
+public class P02_Login extends DriverFactory {
 
     private static final By LOGIN_TEXT = By.xpath("//div[@class = 'login-form']//h2");
     private static final By EMAIL_ADDRESS_FIELD = By.xpath("//input[@data-qa = 'login-email']");

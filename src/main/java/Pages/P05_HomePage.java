@@ -2,13 +2,13 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class P05_HomePage extends Driver {
+public class P05_HomePage extends DriverFactory {
 
     private static final By SIGNUP_LOGIN_BUTTON = By.xpath("//a[text() = ' Signup / Login']");
     private static final By LOGOUT_BUTTON = By.xpath("//a[text() = ' Logout']");
@@ -259,5 +259,3 @@ public class P05_HomePage extends Driver {
         return this;
     }
 }
-
-

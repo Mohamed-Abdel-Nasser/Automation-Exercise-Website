@@ -2,13 +2,13 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class P01_SignUp extends Driver {
+public class P01_SignUp extends DriverFactory {
 
     private static final By NAME_FIELD = By.xpath("//input[@name='name']");
     private static final By EMAIL_ADDRESS_FIELD = By.xpath("//input[@data-qa='signup-email']");

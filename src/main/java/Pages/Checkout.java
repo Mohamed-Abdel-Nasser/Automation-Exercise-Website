@@ -2,7 +2,7 @@ package Pages;
 
 import Data.DataClass;
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
@@ -12,7 +12,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class Checkout extends Driver {
+public class Checkout extends DriverFactory {
 
     private static final By ADDRESS_DETAILS_LIST = By.xpath("//ul[@class = 'address item box']/li");
     private static final By MESSAGE_TEXT_AREA = By.xpath("//textarea[@name = 'message']");

@@ -1,6 +1,6 @@
 package Utilities.Actions;
 
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
@@ -10,7 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-public class ElementsActions extends Driver {
+import static Utilities.BrowserSetUp.DriverFactory.driver;
+
+public class ElementsActions extends DriverFactory {
     private static final LogManager LOGGER = LogManager.getInstance();
 
     public ElementsActions(WebDriver driver) {

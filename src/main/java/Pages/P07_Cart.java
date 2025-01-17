@@ -1,7 +1,7 @@
 package Pages;
 
 import Utilities.Actions.ElementsActions;
-import Utilities.BrowserSetUp.Driver;
+import Utilities.BrowserSetUp.DriverFactory;
 import Utilities.LOGGER.LogManager;
 import Utilities.ScreenShotsManager.ScreenShot;
 import io.qameta.allure.Allure;
@@ -12,7 +12,7 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class P07_Cart extends Driver {
+public class P07_Cart extends DriverFactory {
 
     private static final By CART_PRODUCTS_LIST = By.xpath("//tbody/tr");
     private static final By PRODUCT_QUANTITY_BUTTON = By.xpath("//td[@class = 'cart_quantity']/button");

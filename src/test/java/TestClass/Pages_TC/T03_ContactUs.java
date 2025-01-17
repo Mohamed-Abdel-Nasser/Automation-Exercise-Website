@@ -39,5 +39,4 @@ public class T03_ContactUs extends TestBase {
         contactUs.clickHomeButton();
         softAssert.assertAll();
     }
-
 }
